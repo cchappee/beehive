@@ -2,7 +2,7 @@ import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-client = WebClient(token='xoxb-1868163589349-1924651479234-FhgM9SfZXngOBxME0HeiDcX7')
+client = WebClient(token='xoxb-1868163589349-1924651479234-OFy4C8ciJbXgvcK9wHQdrZ8w')
 
 try:
     response = client.chat_postMessage(channel='#updates', text="Save the Bees!")
