@@ -2,14 +2,12 @@ import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-
-client = WebClient(os.environ["SLACK_BOT_TOKEN"])
+client = WebClient(token='xoxb-1868163589349-1924651479234-FhgM9SfZXngOBxME0HeiDcX7')
 
 try:
-    response = client.chat_postMessage(channel='#updates', text="Hello world!") # channel ID is: C01RMDXV20K
-    assert response["message"]["text"] == "Hello world!"
+    response = client.chat_postMessage(channel='#updates', text="Save the Bees!")
+    assert response["message"]["text"] == "Save the Bees!"
 except SlackApiError as e:
-    # You will get a SlackApiError if "ok" is False
     assert e.response["ok"] is False
-    assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
+    assert e.response["error"]
     print(f"Got an error: {e.response['error']}")
