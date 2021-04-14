@@ -3,6 +3,7 @@ import time
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
+client = WebClient(token='token')
 
 while True:
     try:
